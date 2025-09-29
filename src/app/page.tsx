@@ -1,6 +1,7 @@
 import AdviceCard from './components/AdviceCard';
 import HeroSection from './components/HeroSection';
 import SectionTitle from './components/SectionTitle';
+import QuizHighlight from './components/QuizHighlight';
 
 export default function Home() {
   const practicalAdvice = [
@@ -54,6 +55,12 @@ export default function Home() {
       condition: "If I had started group projects earlier,",
       result: "I would have avoided last-minute stress and poor grades.",
       tip: "Begin working on projects the day they're assigned, not the week before."
+    },
+    {
+      title: "English Exam Preparation",
+      condition: "If I had practiced with online quizzes regularly,",
+      result: "I would have passed my final English exam with much better confidence.",
+      tip: "Use interactive quiz platforms to improve your English skills progressively."
     }
   ];
 
@@ -141,6 +148,11 @@ export default function Home() {
             {studyAdvice.map((advice, index) => (
               <AdviceCard key={index} advice={advice} />
             ))}
+          </div>
+          
+          {/* English Quiz Platform Highlight */}
+          <div className="mt-12">
+            <QuizHighlight />
           </div>
         </section>
 
